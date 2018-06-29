@@ -1,0 +1,15 @@
+<section class="todo-list card">
+    <div class="card-header">
+      Lista
+    </div>
+    <div class="card-body">
+      <p *ngIf="todos.length < 1">
+        Nenhum todo registrado.
+      </p>
+      <ul>
+        <li *ngFor="let todo of todos">
+          {{todo}}
+        </li>
+      </ul>
+    </div>
+</section>

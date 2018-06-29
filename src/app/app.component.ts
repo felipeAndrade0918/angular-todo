@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  todos: string[] = [];
+
+  updateTodos(item) {
+    this.todos.push(item);
+  }
 }
