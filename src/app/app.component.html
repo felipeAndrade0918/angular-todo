@@ -2,12 +2,12 @@
   <h1>Angular TODO</h1>
 
   <div class="row">
-    <div class="col-md-6">
-      <app-todo-creator (todoCreated)="updateTodos($event)"></app-todo-creator>
+    <div class="col-md-12 mb-3">
+      <app-todo-menu></app-todo-menu>
     </div>
-    
-    <div class="col-md-6">
-      <app-todo-list [todos]="todos"></app-todo-list>
+
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div> 

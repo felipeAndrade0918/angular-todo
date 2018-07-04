@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoService } from './todo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  todos: string[] = [];
 
-  updateTodos(item) {
-    this.todos.push(item);
-  }
 }

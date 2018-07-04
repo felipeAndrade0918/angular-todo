@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-todo-creator',
@@ -10,9 +11,15 @@ export class TodoCreatorComponent {
   task: string = '';
   @Output() todoCreated = new EventEmitter();
 
+  constructor(private todoService: TodoService) {
+
+  }
+
   createTodo() {
-    this.todoCreated.emit(this.task);
-    this.task = '';
+    if (this.task) {
+      this.todoService.addTodo(this.task);
+      this.task = '';
+    }
   }  
 
 }
